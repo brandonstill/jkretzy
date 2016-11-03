@@ -298,7 +298,7 @@ header {
 		@extend .medium-6;
 	}
 	.project-sm, .project-lg {
-		background-color: lighten($secondary-color, 10);
+		background-color: lighten($secondary-color, 6);
 	}
 	.button {
 		@include button(rem-calc(8), $primary-color, true, false, false);
@@ -321,6 +321,9 @@ header {
 	}
 	.project-sm, .project-lg {
 		padding-bottom: rem-calc(20);
+		&.featured {
+			padding-top: rem-calc(20);
+		}
 	}
 }
 
@@ -330,9 +333,15 @@ header {
 	}
 	.project-sm.left {
 		padding: 0 rem-calc(10) rem-calc(20) rem-calc(20);
+		&.featured {
+			padding-top: rem-calc(20);
+		}
 	}
 	.project-sm.right {
 		padding: 0 rem-calc(20) rem-calc(20) rem-calc(10);
+		&.featured {
+			padding-top: rem-calc(20);
+		}
 	}
 }
 
