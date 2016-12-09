@@ -5,432 +5,463 @@
 // Global
 
 .full-width {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 .make-it-white {
-	color: white;
-	h1, h2, h3, h4, h5, h6 {
-		color: #fff;
-	}
-	a, a:visited {
-		color: #fff;
-	}
-	a:hover {
-		transition: color .2s ease-in-out;
-		color: lighten($primary-color, 25);
-	}
+  color: white;
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+  a, a:visited {
+    color: #fff;
+  }
+  a:hover {
+    transition: color .2s ease-in-out;
+    color: lighten($primary-color, 25);
+  }
 }
 
 .super-heading {
-	font-size: $h1-font-size !important;
+  font-size: $h1-font-size !important;
 }
 
 .common-padding {
-	padding-top: rem-calc(40);
-	padding-bottom: rem-calc(100);
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(100);
 }
 
 .narrow-row {
-	max-width: 880px;
+  max-width: 920px;
 }
 
 h1 {
-	font-family: $fancy-font-heading;
+  font-family: $fancy-font-heading;
 }
 
 $large-tri: 40px;
 $small-tri: 20px;
 
 .tri {
-	width: 100%;
-	height: $large-tri;
-	margin-top: -$large-tri;
-	position: relative;
+  width: 100%;
+  height: $large-tri;
+  margin-top: -$large-tri;
+  position: relative;
   .tri-left, .tri-right {
-  	font-size: 0px; 
-  	line-height: 0%; 
-  	width: 50%;
+    font-size: 0px; 
+    line-height: 0%; 
+    width: 50%;
   }
   .tri-left {
-		border-bottom-style: solid;
-		border-bottom-width: $large-tri;
-		border-bottom-color: #fff;
-		border-right-style: solid;
-		border-right-width: $large-tri;
-		border-right-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: $large-tri;
+    border-bottom-color: #fff;
+    border-right-style: solid;
+    border-right-width: $large-tri;
+    border-right-color: transparent;
   }
   .tri-right {
-  	border-bottom-style: solid;
-		border-bottom-width: $large-tri;
-		border-bottom-color: #fff;
-		border-left-style: solid;
-		border-left-width: $large-tri;
-		border-left-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: $large-tri;
+    border-bottom-color: #fff;
+    border-left-style: solid;
+    border-left-width: $large-tri;
+    border-left-color: transparent;
   }
   .tri-left, .tri-right {
-  	float: left;
-  	display: inline-block;
+    float: left;
+    display: inline-block;
   }
   &.tri-primary{
-  	.tri-left {
-	  	border-bottom-color: $primary-color;
-	  }
-	  .tri-right {
-	  	border-bottom-color: $primary-color;;
-	  }
+    .tri-left {
+      border-bottom-color: $primary-color;
+    }
+    .tri-right {
+      border-bottom-color: $primary-color;
+    }
   }
   &.tri-secondary{
-  	.tri-left {
-	  	border-bottom-color: $secondary-color;
-	  }
-	  .tri-right {
-	  	border-bottom-color: $secondary-color;
-	  }
+    .tri-left {
+      border-bottom-color: $secondary-color;
+    }
+    .tri-right {
+      border-bottom-color: $secondary-color;
+    }
   }
 }
 
 @media #{$small-only} {
-	.tri {
-		height: $small-tri;
-		margin-top: -$small-tri;
-		.tri-left, .tri-right {
-			border-width: $small-tri;
-		}
-	}
+  .tri {
+    height: $small-tri;
+    margin-top: -$small-tri;
+    .tri-left, .tri-right {
+      border-width: $small-tri;
+    }
+  }
 }
 .heading {
-	text-align: center;
-	margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .content {
-	text-align: center;
+  text-align: center;
 }
 
 // ----------------------------------------------------------------------------
 // Banner
 
 header {
-	padding: 20px 0;
-	line-height: 1;
-	background-color: #fff;
-	background: rgba(#fff,0.97);
-	box-shadow: 0 0 3px 0 rgba(darken($secondary-color, 15), 1);
-	position: fixed;
-	z-index: 10;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
+  padding: 20px 0;
+  line-height: 1;
+  background-color: #fff;
+  background: rgba(#fff,0.97);
+  box-shadow: 0 0 3px 0 rgba(darken($secondary-color, 15), 1);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .header-logo {
-	@extend .columns;
-	@extend .small-12;
-	@extend .medium-4;
-	@extend .large-4;
+  @extend .columns;
+  @extend .small-12;
+  @extend .medium-4;
+  @extend .large-4;
 }
 
 .header-logo a, .small-logo a {
-	font-family: $fancy-font-heading;
-	margin: 0;
-	padding: 0;
-	color: lighten($body-font-color, 5);
-	font-size: rem-calc(18);
-	&:hover, &:visited {
-		transition: color .2s ease-in-out;
-		color: lighten($body-font-color, 5);
-	} 
+  font-family: $fancy-font-heading;
+  margin: 0;
+  padding: 0;
+  color: lighten($body-font-color, 5);
+  font-size: rem-calc(18);
+  &:hover, &:visited {
+    transition: color .2s ease-in-out;
+    color: lighten($body-font-color, 5);
+  } 
 }
 
 [role="navigation"] { 
-	@extend .columns;
-	@extend .small-12;
-	@extend .medium-8;
-	@extend .large-8;
+  @extend .columns;
+  @extend .small-12;
+  @extend .medium-8;
+  @extend .large-8;
 }
 
 .header-logo a, .header-nav .inline-list li{
-	line-height: 45px;
+  line-height: 45px;
 }
 
 .header-nav {
-	text-align: right;
-	height: 45px;
-	.inline-list {
-		margin: 0;
-		padding: 0;
-		display: inline-block;
-	}
-	a {
-		font-size: rem-calc(18);
-		height: 40px;
-	}
-	a, a:visited {
-		color: lighten($body-font-color, 15);
-		border-bottom: solid rgba($primary-color, 0) 3px;
-	}
-	a:hover {
-		transition: border-color .5s ease-in-out;
-		color: lighten($body-font-color, 15);
-		border-bottom: solid rgba($primary-color, 1) 3px;
-	}
-	.top {
-		padding: 0 rem-calc(10);
-	}
+  text-align: right;
+  height: 45px;
+  .inline-list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  a {
+    font-size: rem-calc(18);
+    height: 40px;
+  }
+  a, a:visited {
+    color: lighten($body-font-color, 15);
+    border-bottom: solid rgba($primary-color, 0) 3px;
+  }
+  a:hover {
+    transition: border-color .5s ease-in-out;
+    color: lighten($body-font-color, 15);
+    border-bottom: solid rgba($primary-color, 1) 3px;
+  }
+  .top {
+    padding: 0 rem-calc(10);
+  }
 }
 
 @media #{$small-only} {
-	header {
-		padding: 10px 0;
-	}
-	.small-logo a {
-		line-height: 25px;
-		font-size: rem-calc(12);
-		border-bottom: solid rgba($primary-color, 0) 3px !important;
-	}
-	.header-logo a, .header-nav .inline-list li{
-		line-height: 25px;
-	}
-	.header-logo, .header-nav {
-		text-align: center;
-	}
-	.header-nav {
-		height: 25px;
-		a {
-			font-size: rem-calc(13); 
-			height: 25px;
-		}
-		li {
-			margin-left: rem-calc(8);
-		}
-		.top {
-			padding: 0 rem-calc(6);
-		}
-		.small-logo {
-			margin: 0;
-		}
-	}
-	[role="navigation"] { 
-		padding: 0 !important;
-	}
+  header {
+    padding: 10px 0;
+  }
+  .small-logo a {
+    line-height: 25px;
+    font-size: rem-calc(12);
+    border-bottom: solid rgba($primary-color, 0) 3px !important;
+  }
+  .header-logo a, .header-nav .inline-list li{
+    line-height: 25px;
+  }
+  .header-logo, .header-nav {
+    text-align: center;
+  }
+  .header-nav {
+    height: 25px;
+    a {
+      font-size: rem-calc(13); 
+      height: 25px;
+    }
+    li {
+      margin-left: rem-calc(8);
+    }
+    .top {
+      padding: 0 rem-calc(6);
+    }
+    .small-logo {
+      margin: 0;
+    }
+  }
+  [role="navigation"] { 
+    padding: 0 !important;
+  }
 }
 
 // ----------------------------------------------------------------------------
 // Homepage Hero 
 
 .homepage-hero {
-	padding: 305px 0 280px;
-	background-color: $primary-color;
-	background: radial-gradient($primary-color, darken($primary-color, 15) 1200px);
-	position: relative;
-	.kretzy-logo {
-		background-color: white;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: $primary-color;
+  background: radial-gradient($primary-color, darken($primary-color, 15) 1200px);
+  position: relative;
+  .kretzy-logo {
+    background-color: white;
     padding: 5px 5px 5px 20px;
     max-height: 80px;
     position: absolute;
     left: 0;
     top: 140px;
-	}
+  }
 }
 
 .homepage-hero-content {
-	text-align: center;
-	position: relative;
-	h1 {
-		font-size: rem-calc(60);
-	}
-	h1, h2 {
-		padding: 0;
-		margin: 0;
-		color: #fff;
-		text-shadow: rgba(darken($primary-color, 10), 1) -1px 2px 1px;
-	}
+  text-align: center;
+  position: relative;
+  h1 {
+    font-size: rem-calc(60);
+  }
+  h1, h2 {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-shadow: rgba(darken($primary-color, 10), 1) -1px 2px 1px;
+  }
 }
 
 @media #{$small-only} {
-	.homepage-hero {
-		padding: 220px 0 160px;
-		.kretzy-logo {
-			top: 80px;
-		}
-	}
-	.homepage-hero-content {
-		h1 {
-			font-size: rem-calc(32);
-		}
-		h2 {
-			font-size: rem-calc(24);
-		}
-	}
+  .homepage-hero {
+    padding: 220px 0 160px;
+    .kretzy-logo {
+      top: 80px;
+    }
+  }
+  .homepage-hero-content {
+    h1 {
+      font-size: rem-calc(32);
+    }
+    h2 {
+      font-size: rem-calc(24);
+    }
+  }
 }
 
 // ----------------------------------------------------------------------------
 // Work
 
 .work {
-	@extend .common-padding;
-	text-align: center;
-	> .row {
-		max-width: 880px;
-	}
-	.content {
-		@extend .columns;
-		@extend .small-12;
-	}
-	.project {
-		margin-bottom: rem-calc(30);
-		h2 {
-			font-family: $fancy-font-heading;
-		}
-	}
-	.project-lg {
-		@extend .columns;
-		@extend .small-12;
-	}
-	.project-sm {
-		@extend .columns;
-		@extend .small-12;
-		@extend .medium-6;
-	}
-	.project-sm, .project-lg {
-		background-color: lighten($secondary-color, 6);
-	}
-	.button {
-		@include button(rem-calc(8), $primary-color, true, false, false);
-	}
-	.no-more {
-		background-color: grey !important;
-		cursor: default;
-	}
-}
-
-@media #{$small-only} {
-	.work {
-		.button {
-			@include button(rem-calc(16), $primary-color, true, false, false);
-			display: block;
-		}
-	}
-	.project-lg {
-		padding-top: rem-calc(20);
-	}
-	.project-sm, .project-lg {
-		padding-bottom: rem-calc(20);
-		&.featured {
-			padding-top: rem-calc(20);
-		}
-	}
-}
-
-@media #{$medium-up} {
-	.project-lg {
-		padding: rem-calc(20) !important;
-	}
-	.project-sm.left {
-		padding: 0 rem-calc(10) rem-calc(20) rem-calc(20);
-		&.featured {
-			padding-top: rem-calc(20);
-		}
-	}
-	.project-sm.right {
-		padding: 0 rem-calc(20) rem-calc(20) rem-calc(10);
-		&.featured {
-			padding-top: rem-calc(20);
-		}
-	}
+  @extend .common-padding;
+  text-align: center;
+  .content {
+    @extend .columns;
+    @extend .small-12;
+  }
+  .project {
+    margin-bottom: rem-calc(30);
+    h2 {
+      font-family: $fancy-font-heading;
+    }
+    &__sidebar {
+      padding: 0;
+    }
+    &__details {
+      padding: 0;
+      @media #{$medium-up} {
+        text-align: left;
+        padding-left: 20px;
+      }
+      .button {
+        background-color: white;
+        color: $primary-color !important;
+        &:hover {
+          background-color: darken(white, 14);
+        }
+      }
+    }
+    &--presentation {
+      background-color: lighten($secondary-color, 6);
+      padding: rem-calc(20);
+    }
+  }
+  .project-lg {
+    @extend .columns;
+    @extend .small-12;
+    @media #{$small-only} {
+      padding-top: rem-calc(20);
+      &.featured {
+        padding-top: rem-calc(20);
+      }
+    }
+    @media #{$medium-up} {
+      padding: rem-calc(20) !important;
+    }
+  }
+  .project-sm {
+    @extend .columns;
+    @extend .small-12;
+    @extend .medium-6;
+    @media #{$small-only} {
+      padding-top: rem-calc(20);
+      &.featured {
+        padding-top: rem-calc(20);
+      }
+    }
+  }
+  .project-sm.left {
+    @media #{$medium-up} {
+      padding: 0 rem-calc(10) rem-calc(20) rem-calc(20);
+      &.featured {
+        padding-top: rem-calc(20);
+      }
+    }
+  }
+  .project-sm.right {
+    @media #{$medium-up} {
+      padding: 0 rem-calc(20) rem-calc(20) rem-calc(10);
+      &.featured {
+        padding-top: rem-calc(20);
+      }
+    }
+  }
+  .project-sm, .project-lg {
+    background-color: lighten($secondary-color, 6);
+  }
+  .button {
+    @include button(rem-calc(8), $primary-color, true, false, false);
+    @media #{$small-only} {
+      @include button(rem-calc(16), $primary-color, true, false, false);
+      display: block;
+    }
+  }
+  .no-more {
+    background-color: grey !important;
+    cursor: default;
+  }
 }
 
 // ----------------------------------------------------------------------------
 // About
 
 .about{
-	background-color: $secondary-color;
-	@extend .common-padding;
-	.row {
-		@extend .narrow-row;
-	}
-	.heading {
-		text-align: center;
-	}
-	.content-left{
-		@extend .columns;
-		@extend .small-12;
-		@extend .medium-7;
-	}
-	.content-right {
-		@extend .columns;
-		@extend .small-12;
-		@extend .medium-5;
-	}
-	.button {
-		@include button(rem-calc(8), #fff, true, false, false);
-		color: $primary-color;
-		&:hover {
-			color: $primary-color;
-		}
-	}
-}
-
-@media #{$small-only} {
-	.about {
-		.button {
-			@include button(rem-calc(16), #fff, true, false, false);
-			display: block;
-			color: $primary-color;
-			&:hover {
-				color: $primary-color;
-			}
-		}
-	}
+  background-color: $secondary-color;
+  @extend .common-padding;
+  &__row {
+    @extend .narrow-row;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  &__img {
+    border-radius: 50%;
+    max-height: 260px;
+    @media #{$small-only} {
+      max-height: 200px;
+      margin: 30px 0;
+    }
+  }
+  &__sidebar {
+    text-align: center;
+    @media #{$medium-up} {
+      text-align: right;
+    }
+  }
+  &__details {
+    @media #{$small-only} {
+      text-align: center;
+    }
+  }
+  .heading {
+    text-align: center;
+  }
+  .button {
+    @include button(rem-calc(8), #fff, true, false, false);
+    color: $primary-color;
+    margin: 0;
+    &:hover {
+      color: $primary-color;
+    }
+    @media #{$small-only} {
+      @include button(rem-calc(16), #fff, true, false, false);
+      display: block;
+      color: $primary-color;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
 }
 
 // ----------------------------------------------------------------------------
 // Contact
 
 .contact {
-	@extend .common-padding;
-	padding-bottom: rem-calc(40);
-	@extend .make-it-white;
-	background-color: $primary-color;
-	border-bottom: 20px solid $tertiary-color;
-	.content {
-		@extend .columns;
-		@extend .small-12;
-		text-align: center;
-		font-size: rem-calc(24);
-		font-size: rem-calc(26);
-		.social {
-			font-size: 18px;
-			line-height: 100px;
-    	letter-spacing: -5px;
-		}
-		.fa-stack-1x {
-			color: $primary-color;
-		}
-		.fa-stack-2x {
-			color: lighten($primary-color, 20);
-		}
-		a:hover {
-			.fa-stack-2x {
-				transition: color .2s ease-in-out;
-				color: lighten($primary-color, 15);
-			}
-		}
-	}
+  @extend .common-padding;
+  padding-bottom: rem-calc(40);
+  @extend .make-it-white;
+  background-color: $primary-color;
+  border-bottom: 20px solid $tertiary-color;
+  .content {
+    @extend .columns;
+    @extend .small-12;
+    text-align: center;
+    font-size: rem-calc(24);
+    font-size: rem-calc(26);
+    .social {
+      font-size: 18px;
+      line-height: 100px;
+      letter-spacing: -5px;
+    }
+    .fa-stack-1x {
+      color: $primary-color;
+    }
+    .fa-stack-2x {
+      color: lighten($primary-color, 20);
+    }
+    a:hover {
+      .fa-stack-2x {
+        transition: color .2s ease-in-out;
+        color: lighten($primary-color, 15);
+      }
+    }
+  }
 }
 
 @media #{$small-only} {
-	.contact {
-		a.social {
-			letter-spacing: 8px;
-		}
-	}
+  .contact {
+    a.social {
+      letter-spacing: 8px;
+    }
+  }
 }
+
+// ----------------------------------------------------------------------------
+// Objects
+
 
 
 
